@@ -13,7 +13,7 @@ namespace MVision.Business.EditableTemplates
         private readonly IDictionary<MediaType, IEditableTemplateInstanceService> _creationServices =
             new Dictionary<MediaType, IEditableTemplateInstanceService>();
 
-        5
+        7
         public TemplateInstanceServiceFactory(IMediaRepository mediaRepository, 
                                             IMapping<Media, MediaDto> mapping, 
                                             IDesignRepository designRepository,
