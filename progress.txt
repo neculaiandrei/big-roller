@@ -1,0 +1,74 @@
+master			<---    release 6.31.0				develop
+(release 6.31.0)		+3 commit-uri
+
+
+		----------------------------------->
+		
+(cherry pick)										(cherry pick)
+
+
+
+
+
+
+
+
+=========================================CLASSIC MERGE======================
+
+
+1. develop = release/1.0 = master.
+2. release/1.0 - change 1.
+3. develop - change 2.
+4. create pr and merge release/1.0 in master.
+5. cannot create pr release/1.0 in develop.
+6. merge release/1.0 in develop manual.
+7. 	develop 
+	master (2 behind, 1 front)
+	release/1.0 (2 behind, 0 front)
+	
+8. develop - change 3.
+9. from develop create release/2.0.
+10. create pr and merge release/2.0 in master.
+11. develop
+	master (0 behind, 2 front)
+	release/2.0 (0 behind, 0 front)
+
+12. develop - change 4.
+13. from develop create release/3.0
+14. release/3.0 - change 5.
+15. develop - change 6.
+16. create pr and merge release/3.0 in master.
+17. cannot create pr release/3.0 in develop.
+18. merge release/1.0 in develop manual.
+
+	develop
+	master (2 behind, 3 front)
+	release/3.0 (2 behind, 0 front)
+	
+19.  from develop create release/4.0
+20.  release/4.0 - change 7
+21.  create pr and merge release/3.0 in master.
+22.  create pr and merge release/4.0 in develop.
+	develop
+	master (1 behind, 4 front)
+	release/4.0 (1 behind, 0 front)
+	
+23.  from develop change 8
+24.  from develop release/5.0
+25   merge release/5.0 in master
+	develop
+	master (0 behind, 5 front)
+	release/5.0 (0 behind, 0 front)
+	
+	
+============================================= SQUASH & MERGE======================
+
+26. from develop change 9
+27	release/7.0 change 10
+28. create pr and merge release/7.0 in squash-master.
+29. create pr and merge release/7.0 in develop.
+
+
+30. from develop, release 8.0
+31. commit 11 in release 8.0
+31. cannot merge in master 
