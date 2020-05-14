@@ -13,6 +13,8 @@ jobs:
       run: sh ./appendLine.sh
     - name: Commit File
       run: |
+        git config --global user.email "an_drey_curent@yahoo.com"
+        git config --global user.name "neculaiandrei"
         git add .
         git commit -m "Changed File"
         git push origin develop
