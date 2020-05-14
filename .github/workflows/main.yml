@@ -1,4 +1,4 @@
-- name: Simple commit
+name: Simple commit
   uses: zwaldowski/git-commit-action@v1
   with:
     # Directory to create commit in
